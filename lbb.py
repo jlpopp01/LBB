@@ -1,5 +1,5 @@
 #if database?
-lbb = []
+#lbb = []
 
 #Gather info from user I think this might need to be in the while loop
 #entry = input("Would you like to make an entry? Y/N format. N to Quit. ")
