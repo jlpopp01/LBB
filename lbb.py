@@ -1,40 +1,56 @@
-#if database?
-#lbb = []
+from datetime import datetime
 
-#Gather info from user I think this might need to be in the while loop
-#entry = input("Would you like to make an entry? Y/N format. N to Quit. ")
-date = input("What date would you like to save? Please use MM/DD/YYYY format. ")
-note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
-
-#run loop until quit
-#while (entry='Y'):
-    #continue
-
-# check to make sure the entry is valid per perimeters
-#if (entry='N'):
-    #break
-    elif (input != MM/DD/YYY):
-    print("Wrong format, please try again")
-    elif (len(note) > 250 characters):
-    print("Keep it short and cover the topic")
-
-#merge input into one object
-.join(date,note)
-
-#write info to csv file
-fd = open(filename, "lbb.csv")
-input = raw_input(date + " , " + note)
-fd.write(input)
-
-#or append to database
-.append(date + note) -> lbb.csv
-
-#print entries
-print (lbb)
+#check to see if user would like to make an entry
 
 def lbb():
     entry = []
     while True:
         entry = input("Would you like to make an entry? Y/N format. N to Quit. ").lower()
-        if entry == 'n':
-            break
+        if entry == 'y':
+            date = input("What date would you like to save? Please use MM/DD/YYYY format. ")
+            note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
+        elif entry == 'n':
+            break 
+
+lbb() #activate
+
+#this function checks to see if the date is valid
+def is_valid_date(date):
+    '''Returns True if date is formatted MM/DD/YYYY and False otherwise
+    
+    invalid example: 
+    7/4/2016
+    B/13-4598
+    15/20/2016
+
+        my_date = datetime.date(date_string)
+    except Exception as e:
+        print("Sorry that date isn't valid")
+        return False
+    '''
+    try:
+        new_date = datetime.date(date_string)
+    except ValueError:
+        print("Wrong format, please try again")
+
+
+#this function will limit the characters
+
+def is_note_short(note):
+    if len(note) > 250:
+        print("Twitter rules here, keep it short.")
+
+
+#merge input into one object
+#.join(date,note)
+
+#write info to csv file
+#fd = open(filename, "lbb.csv")
+#input = raw_input(date + " , " + note)
+#fd.write(input)
+
+#or append to database
+#.append(date + note) -> lbb.csv
+
+#print entries
+#print (lbb)
