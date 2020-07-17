@@ -2,6 +2,8 @@ import datetime
 
 #check to see if user would like to make an entry
 
+"""the variables are acting a fool. you need to figure this out"""
+
 class Entry:
 
     def __init__(self, date, note):
