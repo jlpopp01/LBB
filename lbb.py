@@ -2,8 +2,13 @@ import datetime
 
 #check to see if user would like to make an entry
 
+class Entry:
+
+    def __init__(self, date, note):
+        self.date = str(date)
+        self.note = note
+
 def lbb():
-    entry = []
     while True:
         entry = input("Would you like to make an entry? Y/N format. N to Quit. ").lower()
         if entry == 'y':
@@ -12,10 +17,10 @@ def lbb():
         elif entry == 'n':
             break 
 
+
 #lbb() #activate
 
 lbb()
-
 
 
 
