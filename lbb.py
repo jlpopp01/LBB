@@ -1,5 +1,4 @@
 import datetime
-import re
 
 #check to see if user would like to make an entry
 
@@ -8,7 +7,8 @@ def lbb():
     while True:
         entry = input("Would you like to make an entry? Y/N format. N to Quit. ").lower()
         if entry == 'y':
-            continue
+            date = input("What date would you like to save? Please use MM-DD-YYYY format. ")
+            note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
         elif entry == 'n':
             break 
 
@@ -16,7 +16,7 @@ def lbb():
 
 lbb()
 
-date = input("What date would you like to save? Please use MM-DD-YYYY format. ")
+
 
 
 #this function checks to see if the date is valid
@@ -30,7 +30,7 @@ is_valid_date(date)
 
 #this function will limit the characters
 
-note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
+
 
 def is_note_short(note):
     if len(note) > 280:
