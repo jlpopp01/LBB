@@ -1,6 +1,6 @@
 Hello Distinguished Guests!
 
-This console app is brought to you by Pyhton
+This console app is brought to you by Python
 
 It will prompt you to make an entry, that entry will be based on a date and a note. 
 
