@@ -2,7 +2,7 @@ import datetime
 
 #check to see if user would like to make an entry
 
-"""the variables are acting a fool. you need to figure this out"""
+"""can access vars now. tests work but do not kick back to reenter. does not save to anything right now, so loop will only print most recent entry"""
 
 class Entry:
 
@@ -17,12 +17,6 @@ while True:
         note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
     elif entry == 'n':
         break 
-
-
-#lbb() #activate
-
-
-
 
 
 #this function checks to see if the date is valid
@@ -44,5 +38,7 @@ def is_note_short(note):
 
 
 is_note_short(note)
+
+
 
 print(date + " " + note)
