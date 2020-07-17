@@ -39,6 +39,9 @@ def is_note_short(note):
 
 is_note_short(note)
 
+f = open("lbb.txt", "w")
+f.write(date + " " + note)
+f.close()
 
 
 print(date + " " + note)
