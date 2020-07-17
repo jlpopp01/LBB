@@ -10,19 +10,18 @@ class Entry:
         self.date = str(date)
         self.note = note
 
-def lbb():
-    while True:
-        entry = input("Would you like to make an entry? Y/N format. N to Quit. ").lower()
-        if entry == 'y':
-            date = input("What date would you like to save? Please use MM-DD-YYYY format. ")
-            note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
-        elif entry == 'n':
-            break 
+while True:
+    entry = input("Would you like to make an entry? Y/N format. N to Quit. ").lower()
+    if entry == 'y':
+        date = input("What date would you like to save? Please use MM-DD-YYYY format. ")
+        note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
+    elif entry == 'n':
+        break 
 
 
 #lbb() #activate
 
-lbb()
+
 
 
 
