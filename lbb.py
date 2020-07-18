@@ -41,6 +41,7 @@ while True:
         print("That's not an option, let's try again. ")
         continue
 
+#this will show a countdown to the event that you add
 today = datetime.datetime.now()
 event = datetime.datetime(date)
 countdown = event - today
