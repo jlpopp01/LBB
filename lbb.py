@@ -1,6 +1,5 @@
 import datetime
-
-#check to see if user would like to make an entry
+#for date verification
 
 """
 the while loop now checks the conditions but it still doesnt return to the beginning. 
@@ -8,12 +7,14 @@ will start a file and write to it
 still only writes the most recent entry
 """
 
+#set up some variables
 class Entry:
 
     def __init__(self, date, note):
         self.date = date
         self.note = note
 
+#get a loop going - can make an entry or exit
 while True:
     entry = input("Would you like to make an entry? Y/N format. N to Quit. ").lower()
     if entry == 'y':
@@ -28,10 +29,10 @@ while True:
     elif entry == 'n':
         break 
 
-
+#create and write to file
 f = open("lbb.txt", "a")
 f.write( " \n" + date + " " + note)
 f.close()
 
-
+#print entry
 print(date + " " + note)
