@@ -42,9 +42,11 @@ while True:
         continue
 
 #this will show a countdown to the event that you add
-today = datetime.datetime.now()
-event = datetime.datetime(date)
-countdown = event - today
-
+def a_way_to_countdown():
+    today = datetime.datetime.now()
+    event = datetime.isocalender(date)
+    countdown = event - today
+    return countdown
+    
 #print entry
-print(date + " " + countdown + note)
+print(date + " " + note)
