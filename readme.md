@@ -2,6 +2,12 @@ Hello Distinguished Guests!
 
 This console app is brought to you by Python
 
+Simply slide into the project folder where we've downloaded our files.
+
+type (or copy) python3 lbb.py 
+
+voila!
+
 It will prompt you to make an entry, that entry will be based on a date and a note. 
 
 The date and note are verified (actual date/length of note)

@@ -24,18 +24,22 @@ while True:
         except ValueError:
             print("Wrong format, please try again")
             continue
-#this should be throwing it back to the date var...
-        note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
+#this throws it back if date invalid
+        note = input('What note would you like to save? Keep it short and sweet, 280 character limit.  ')
         if len(note) > 280:
-            print("Twitter rules here, keep it short.")
+            print("Twitter rules here. Nothing after 280. ")
             note[0:280]
-#this should be throwing it back to the note var 
+#this throws it back if note invalid
 #create and write to file
         f = open("lbb.txt", "a")
         f.write( " \n" + date + " " + note)
         f.close()
+        continue
     elif entry == 'n':
         break 
+    elif entry != 'y':
+        print("That's not an option, let's try again. ")
+        continue
 
 #print entry
 print(date + " " + note)
