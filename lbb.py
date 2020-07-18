@@ -41,5 +41,9 @@ while True:
         print("That's not an option, let's try again. ")
         continue
 
+today = datetime.datetime.now()
+event = datetime.datetime(date)
+countdown = event - today
+
 #print entry
-print(date + " " + note)
+print(date + " " + countdown + note)
