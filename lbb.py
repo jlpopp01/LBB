@@ -23,16 +23,17 @@ while True:
             datetime.datetime.strptime(date, '%m-%d-%Y')
         except ValueError:
             print("Wrong format, please try again")
+#this should be throwing it back to the date var...
         note = input('What note would you like to save? Keep it short and sweet, 250 character limit.  ')
         if len(note) > 280:
             print("Twitter rules here, keep it short.")
+#this should be throwing it back to the note var 
+#create and write to file
+        f = open("lbb.txt", "a")
+        f.write( " \n" + date + " " + note)
+        f.close()
     elif entry == 'n':
         break 
-
-#create and write to file
-f = open("lbb.txt", "a")
-f.write( " \n" + date + " " + note)
-f.close()
 
 #print entry
 print(date + " " + note)
