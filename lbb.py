@@ -1,4 +1,5 @@
 import datetime
+import time
 #for date verification
 
 '''
@@ -14,6 +15,10 @@ class Entry:
         self.date = date
         self.note = note
 
+    def countdown(self):
+        countdown = datetime.datetime(date) - datetime.datetime.now()
+        return countdown()
+
 
 #get a loop going - can make an entry or exit
 while True:
@@ -21,7 +26,7 @@ while True:
     if entry == 'y':
         date = input("What date would you like to save? Please use MM-DD-YYYY format. ")
         try:
-            datetime.datetime.strptime(date, '%m-%d-%Y')
+            date = datetime.datetime.strptime(date, '%m-%d-%Y')
         except ValueError:
             print("Wrong format, please try again")
             continue
@@ -34,7 +39,7 @@ while True:
 #this throws it back if note invalid
 #create and write to file
         f = open("lbb.txt", "a")
-        f.write( " \n" + date + " " + note)
+        f.write( " \n" + str(date) + " " + note)
         f.close()
         continue
     elif entry == 'n':
@@ -44,9 +49,6 @@ while True:
         print("That's not an option, let's try again. ")
         continue
 
-#this will show a countdown to the event that you add
-#def countdown():
-    #countdown = datetime.datetime(date) - datetime.datetime.now
-    #return countdown
+countdown = Entry.countdown(int(date))
 
-#countdown(date)
+print(note + " " + date + " " + countdown)
