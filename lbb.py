@@ -11,13 +11,10 @@ print date/note/countdown to terminal
 #set up some variables
 class Entry:
 
-    def __init__(self, day, note):
+    def __init__(self, entry, day, note):
+        self.entry = entry
         self.day = day
         self.note = note
-
-    def countdown(self):
-        countdown = datetime.datetime.date(day) - datetime.date.today()
-        return countdown()
 
 
 #get a loop going - can make an entry or exit
@@ -48,7 +45,8 @@ while True:
     elif entry != 'y':
         print("That's not an option, let's try again. ")
         continue
+for day in entry:
+    countdown = datetime.datetime(day) - datetime.datetime.today()
 
-Entry.countdown(day)
-
+print(countdown)
 print(note + " " + day + " ")
