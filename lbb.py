@@ -11,12 +11,12 @@ print date/note/countdown to terminal
 #set up some variables
 class Entry:
 
-    def __init__(self, date, note):
-        self.date = date
+    def __init__(self, day, note):
+        self.day = day
         self.note = note
 
     def countdown(self):
-        countdown = datetime.datetime(date) - datetime.datetime.now()
+        countdown = datetime.datetime.date(day) - datetime.date.today()
         return countdown()
 
 
@@ -24,9 +24,9 @@ class Entry:
 while True:
     entry = input("Would you like to make an entry? Y/N format. N to Quit ").lower()
     if entry == 'y':
-        date = input("What date would you like to save? Please use MM-DD-YYYY format. ")
+        day = input("What date would you like to save? Please use YYYY-MM-DD format. ")
         try:
-            date = datetime.datetime.strptime(date, '%m-%d-%Y')
+            day = datetime.datetime.strptime(day, '%Y-%m-%d')
         except ValueError:
             print("Wrong format, please try again")
             continue
@@ -39,7 +39,7 @@ while True:
 #this throws it back if note invalid
 #create and write to file
         f = open("lbb.txt", "a")
-        f.write( " \n" + str(date) + " " + note)
+        f.write( " \n" + str(day) + " " + note)
         f.close()
         continue
     elif entry == 'n':
@@ -49,6 +49,6 @@ while True:
         print("That's not an option, let's try again. ")
         continue
 
-countdown = Entry.countdown(int(date))
+Entry.countdown(day)
 
-print(note + " " + date + " " + countdown)
+print(note + " " + day + " ")
