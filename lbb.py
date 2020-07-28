@@ -23,17 +23,17 @@ while True:
     if entry == 'y':
         day = input("What date would you like to save? Please use YYYY-MM-DD format. ")
         try:
-            day = datetime.datetime.strptime(day, '%Y-%m-%d')
+            day = datetime.datetime.strptime(day, '%Y-%m-%d'.split('-'))
         except ValueError:
             print("Wrong format, please try again")
             continue
-#this throws it back if date invalid
+# this tests to see if the date input is valid
         note = input('What note would you like to save? Keep it short and sweet, 280 character limit.  ')
         if len(note) > 280:
             print("Twitter rules here. Nothing after 280. ")
             note[0:280]
             continue
-#this throws it back if note invalid
+#testing to see if the length is appropriate
 #create and write to file
         f = open("lbb.txt", "a")
         f.write( " \n" + str(day) + " " + note)
@@ -42,9 +42,11 @@ while True:
     elif entry == 'n':
         print("Allons-y!")
         break 
+#test for absolutely wrong input
     elif entry != 'y':
         print("That's not an option, let's try again. ")
         continue
+
 for day in entry:
     countdown = datetime.datetime(day) - datetime.datetime.today()
 
