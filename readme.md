@@ -12,10 +12,20 @@ It will prompt you to make an entry, that entry will be based on a date and a no
 
 The date and note are verified (actual date/length of note)
 
-The entry will then be saved to a file and printed to the screen 
+The entry will then be saved to a file and your most recent entry printed to the screen 
 
-This is a simple master loop that saves to an external file with some expanded if/elif work
+##### Requirements Used For Project
 
-It will show a countdown to the event.
+**While Loop**
+    The master while loop is how the whole entry is made and processed
 
-*This project is a work in progress due shortly
+**Create a class, create object, populate with data**
+    We have the Entry class which is the basis for the entry, the day and note are saved...
+
+**Implement a log...**
+    Day and note are saved to a seperate txt file
+    Invalid entries will kick back the loop
+
+
+Thank you for taking the time to grade my project, and all the hard work you do for Code Louisville.
+

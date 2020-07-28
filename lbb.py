@@ -1,5 +1,4 @@
 import datetime
-import time
 #for date verification
 
 '''
@@ -23,7 +22,7 @@ while True:
     if entry == 'y':
         day = input("What date would you like to save? Please use YYYY-MM-DD format. ")
         try:
-            day = datetime.datetime.strptime(day, '%Y-%m-%d'.split('-'))
+            day = datetime.datetime.strptime(day, '%Y-%m-%d')
         except ValueError:
             print("Wrong format, please try again")
             continue
@@ -47,8 +46,16 @@ while True:
         print("That's not an option, let's try again. ")
         continue
 
-for day in entry:
-    countdown = datetime.datetime(day) - datetime.datetime.today()
+'''this is a countdown that im working with and running circles with, don't mind it...
+
+def to_integer(dt_time):
+    return 10000*dt_time.year + 100*dt_time.month + dt_time.day
+
+to_integer(day)
+
+countdown = datetime.datetime(day) - datetime.datetime.today()
 
 print(countdown)
-print(note + " " + day + " ")
+'''
+
+print(note + " " + str(day) + " ")
