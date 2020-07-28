@@ -48,10 +48,10 @@ while True:
 
 '''this is a countdown that im working with and running circles with, don't mind it...
 
-def to_integer(dt_time):
-    return 10000*dt_time.year + 100*dt_time.month + dt_time.day
+def datetime_to_int(day):
+    return int(day.strftime("%Y%m%d"))
 
-to_integer(day)
+datetime_to_int(day)
 
 countdown = datetime.datetime(day) - datetime.datetime.today()
 

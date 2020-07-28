@@ -27,5 +27,9 @@ The entry will then be saved to a file and your most recent entry printed to the
     Invalid entries will kick back the loop
 
 
+**Commits**
+    I'm at 32 commits and the time of writing this. 
+
+
 Thank you for taking the time to grade my project, and all the hard work you do for Code Louisville.
 
